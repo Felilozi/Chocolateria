@@ -1,4 +1,9 @@
 # Chocolateria
+requisitos 
+
+istalar django
+istalar python 
+
 Mi primera pagina web (proyecto final) 
 
 la mayorias de las cosas aun no estan completa
