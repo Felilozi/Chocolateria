@@ -12,11 +12,11 @@ Intrucciones:
 
 Por el momento mi proyecto hace 
 
-1 Te redirije a cada pagina
+1 Te redirije a cada pagina con los botones
 
 2 podes crear un usuario 
 
-Contine
+Contiene
 
 1 pagina de inicio 
 
@@ -26,8 +26,9 @@ Contine
 
 4 pagina con cada chocolate en total son 5 
 
-5 pagina de buscador 
+5 pagina de buscador
+6 pagina con los resultados buscado con un boton de productos y un nuevo buscador 
 
+espero que este bien por el momento 
 
-6 pagina que mustra los chocolates que esta buscando que ya hayas seleccionado anterior mente 
 
