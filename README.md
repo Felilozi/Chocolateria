@@ -1,14 +1,15 @@
-# Chocolateria
-requisitos 
+#### Chocolateria
+##requisitos 
 
 istalar django
+
 istalar python 
 
-Mi primera pagina web (proyecto final) 
+###Mi primera pagina web (proyecto final) 
 
 la mayorias de las cosas aun no estan completa
 
-Intrucciones:
+###Intrucciones:
 
 Por el momento mi proyecto hace 
 
