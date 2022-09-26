@@ -1,0 +1,34 @@
+{% extends "Appchoco/padre.html"%}
+
+{%load static %}
+{% block titulo %}
+Queremos saber un poco de vos!!
+Gracias por venir!!!
+
+{% endblock titulo %}
+{% block parrafo %}
+<a class="navbar-brand" href="{% url 'todomensaje' %}">Todos los mensajes</a>
+<h1 style="color:darkcyan">Dejanos tu consulta </h1> 
+ <form action=""method="POST">{% csrf_token %}
+
+    
+ <table>
+    {{ form2.as_table }}
+    
+
+
+ </table>
+
+ <input type="submit" value="Enviar">
+
+
+
+
+
+
+
+
+
+ </form>
+
+{% endblock parrafo %}

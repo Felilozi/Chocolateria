@@ -1,0 +1,27 @@
+{% extends "Appchoco/padre.html"%}
+{%load static %}
+{% block titulo %}
+Productos!!!!
+{% endblock titulo %}
+{% block parrafo %}
+<h2 style="color:darkcyan">Lista de productos</h2> 
+    
+    {% for produc in productos %}
+    <ul>
+        <table>
+        <li>Chocolate : {{produc.nombre}}</li>
+        <li>Sabor : {{produc.sabor}}</li> 
+        <li>id : {{produc.idP}}</li> 
+        </table>
+        
+    </ul>
+    {% endfor %}
+
+    
+
+
+
+
+
+
+{% endblock parrafo %}
