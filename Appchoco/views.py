@@ -69,7 +69,7 @@ def contraseña1 (request):##cambiar el nombre##
 ###########-------Busqueda-----#######################
 def busqueda_chocolate(request):
     return render(request,"Appchoco/busquedaC.html")
-############----------------Buscar--------------###########    
+############----------------Buscar--------------##############    
 def buscar(request):
     if request.GET["Nombre"]:
         busqueda = request.GET["Nombre"]
@@ -82,7 +82,7 @@ def buscar(request):
     
     return HttpResponse(mensa) 
 
-#######-----Lee los productos --------#####
+#######-----Lee los productos --------#########
 def leeproductos(request):
     productoslee = Productos.objects.all()
     contexto = {"productos":productoslee}
