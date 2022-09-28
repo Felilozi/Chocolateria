@@ -97,12 +97,12 @@ def todomensajes(request):
     return render(request,"Appchoco/mensajes.html",contexto)
 
 
- ###--------Producto--------###   
+ ###--------Producto--------#######   
 
 def producto1(request):
     return render(request,"Appchoco/productos.html")
     
- #----------Formulario de choco ------ #  
+ #----------Formulario de choco ------ ####### 
 def chocolateForm(request):
    
     if request.method=="POST":
