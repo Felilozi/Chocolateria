@@ -1,0 +1,19 @@
+{% extends "Appchoco/padre.html"%}
+{%load static %}
+{% block titulo %}
+Detalles de mesaje
+
+{% endblock titulo %}
+{% block parrafo %}
+<p>Mensaje de : {{contactos.nombre}}</p>
+<p>Detalle de Email: {{contactos.email}}</p>
+<p>Detalle de mensaje: {{contactos.mensaje}}</p>
+
+<a class="btn btn-outline-info" href="{% url 'LeerMensajes' %}">Regresar</a>  
+
+
+
+
+
+
+{% endblock parrafo %}

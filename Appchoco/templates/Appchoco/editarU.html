@@ -1,0 +1,19 @@
+{% extends "Appchoco/padre.html"%}
+
+{%load static %}
+{% block titulo %}
+Editar...!!!
+
+{% endblock titulo %}
+{% block parrafo %}
+<h1 style="color:darkcyan">Editar Usuario :{{usuario}}</h1> 
+ <form action=""method="POST">{% csrf_token %}    
+     <table>
+        {{miformu.as_table}}
+    </table>
+ <input type="submit" value="Enviar" >
+ 
+
+ </form>
+
+{% endblock parrafo %}

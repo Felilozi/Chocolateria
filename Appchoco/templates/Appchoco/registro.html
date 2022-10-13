@@ -1,0 +1,13 @@
+{% extends "Appchoco/padre.html"%}
+{%load static %}
+{% block titulo %}
+<h1>Registrate </h1>
+
+{% endblock titulo %}
+{% block parrafo %}
+<form action=""method="POST">{% csrf_token %}
+   <h2 style="color: rgb(36, 36, 177)">Ingrese sus datos</h2>
+   <table>{{formularioUsuario.as_p}}</table>
+   <button type="submit" class="btn btn-outline-info" style="color:rgb(41, 41, 175)">Registrar</button>
+ </form>
+{% endblock parrafo %}

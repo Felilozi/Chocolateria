@@ -1,0 +1,15 @@
+{% extends "Appchoco/padre.html"%}
+{%load static %}
+{% block titulo %}
+<h1>Agregar imagen</h1>
+
+{% endblock titulo %}
+{% block parrafo %}
+<H1>Agregar imagen</h1>
+<form action="" method="POST" enctype="multipart/form-data"> {%csrf_token%}
+    <p>{{Miform.as_p}} </p>     
+    <input type="submit" style="color :rgb(13, 13, 224)" value ='Subir imagen '>
+    
+</form>   
+     
+{% endblock parrafo %}

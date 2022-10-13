@@ -4,24 +4,31 @@
 Productos!!!!
 {% endblock titulo %}
 {% block parrafo %}
-<h2 style="color:darkcyan">Lista de productos</h2> 
+    <h2 style="color:darkcyan">Lista de productos!!!</h2> 
     
-    {% for produc in productos %}
-    <ul>
-        <table>
-        <li>Chocolate : {{produc.nombre}}</li>
-        <li>Sabor : {{produc.sabor}}</li> 
-        <li>id : {{produc.idP}}</li> 
-        </table>
+    
+       
+    {% for x in miproductos %}
+        <p>Chocolate : {{x.nombre}}</p>
+        <p>Sabor : {{x.sabor}}</p>   
+        <p>Precio : {{x.precio}}</p>   
+        <img style=width:10% src="{{x.imagen.url}}" alt="">
+        <div>    
+        <button>
+            <a href="{% url 'Editar_choco' x.nombre %}">Editar</a> 
+        </button>
+      
+        <button>
+            <a href="{% url 'Borrar_choco' x.nombre %}">Delete</a>
+        </button>
         
-    </ul>
+        </div>    
     {% endfor %}
-
-    
-
-
+  
+ <div><a class="btn btn-info" href="{% url 'Agregar_Choco' %}">Agregar</a></div>      
 
 
 
+   
 
 {% endblock parrafo %}

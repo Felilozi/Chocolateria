@@ -1,0 +1,11 @@
+{% extends "Appchoco/padre.html"%}
+{%load static %}
+{% block titulo %}
+Iniciar Sesion
+{% endblock titulo %}
+{% block parrafo %}
+<form action=""method="POST">{% csrf_token %}
+  {{formPas.as_p}}
+  <button type="submit" style="color:blue">Iniciar Sesion</button>
+</form>
+{% endblock parrafo %}

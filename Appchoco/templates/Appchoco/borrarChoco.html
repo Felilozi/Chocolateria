@@ -1,0 +1,20 @@
+{% extends "Appchoco/padre.html"%}
+
+{%load static %}
+{% block titulo %}
+Productos
+
+{% endblock titulo %}
+{% block parrafo %}
+<h1 style="color:darkcyan">Borrar Chocolate </h1> 
+
+ <table>
+    {{choco2.as_p}}
+    
+
+
+ </table>
+
+ <input type="submit" value="Enviar" >
+
+ {% endblock parrafo %}

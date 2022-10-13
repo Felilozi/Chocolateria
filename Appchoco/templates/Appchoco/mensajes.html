@@ -4,22 +4,28 @@
 Mensajes!!!!
 {% endblock titulo %}
 {% block parrafo %}
+
 <h2 style="color:darkcyan">Mensajes</h2> 
     
     {% for ms in mesaje %}
-    <ul>
-        <table>
-        <li>Nombre : {{ms.nombre}}</li>
-        <li>Email : {{ms.email}}</li> 
-        <li>Mensaje : {{ms.mensaje}}</li> 
-        </table>
+        <ul>
         
-    </ul>
+            <li>Nombre : {{ms.nombre}}</li>
+            <li>Email : {{ms.email}}</li> 
+            <li>Mensaje : {{ms.mensaje}}</li> 
+        
+           
+        <button>
+            <a href="{%url'eliminar'ms.nombre%}">Borrar </a>
+        </button>
+        <button>
+            <a href="{%url'EditarMs' ms.nombre %}">Editar</a>
+        </button>
+        </ul> 
     {% endfor %}
 
     
-
-
+<a class="navbar-brand" href="{% url 'formu2'%}">Escibir un mensaje </a>
 
 
 

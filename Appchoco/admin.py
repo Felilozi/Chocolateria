@@ -4,5 +4,6 @@ from Appchoco.models import *
 admin.site.register(Productos)
 admin.site.register(Usuario)
 admin.site.register(Contactos)
-admin.site.register(Contraseña)
+admin.site.register(Avatar)
+
 

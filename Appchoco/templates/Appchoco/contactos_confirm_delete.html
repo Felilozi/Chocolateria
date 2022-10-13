@@ -1,0 +1,16 @@
+{% extends "Appchoco/padre.html"%}
+{%load static %}
+{% block titulo %}
+Eliminar Mensaje
+
+{% endblock titulo %}
+{% block parrafo %}
+<form action="" method="POST">{% csrf_token %}
+    <p>Deseas eliminar: {{contactos.nombre}}?</p>
+    <input type="submit" value="Confirmar">
+
+
+
+
+</form>
+{% endblock parrafo %}              

@@ -1,0 +1,20 @@
+{% extends "Appchoco/padre.html"%}
+{%load static %}
+{% block titulo %}
+Escribe un  Mensaje
+
+{% endblock titulo %}
+{% block parrafo %}
+<h1 style="color :rgb(24, 24, 204)">Mensaje</h1>
+<form action=""method="POST">{% csrf_token %}
+    <table>
+        {{form.as_table}}</a>
+        </table>   
+   
+        <input type="submit" style="color :rgb(13, 13, 224)" value ='Enviar'>
+
+    
+
+
+</form>
+{% endblock parrafo %}

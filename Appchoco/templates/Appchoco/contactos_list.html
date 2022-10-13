@@ -1,0 +1,21 @@
+{% extends "Appchoco/padre.html"%}
+{%load static %}
+{% block titulo %}
+Aca esta todos los mensajes
+
+{% endblock titulo %}
+{%block parrafo%}
+<h1 style="color:royalblue"> Todo los mensajes</h1>{% csrf_token %}
+     {%for men in object_list%}
+    <ul>
+        <li>Nombre: {{men.nombre}}</li>
+        <li>Mensaje : {{men.mensaje}}</li>
+        <a style="color:rgb(37, 73, 150) " href="{% url 'DetalleMensaje' men.id%}">Ver detalle</a>
+        <a style="color:rgb(37, 73, 150) " href="{% url 'EditarMensaje' men.id %}">Editar</a>
+        <a style="color:rgb(37, 73, 150) " href="{% url 'BorrarMensaje' men.id%}">Borrar</a>
+    </ul>
+      
+    {%endfor%}
+    <a href="{% url 'CrearMensaje' %}">Crear mensaje</a>  
+
+    {%endblock parrafo%}
