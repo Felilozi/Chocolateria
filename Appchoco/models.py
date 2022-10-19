@@ -13,15 +13,6 @@ class Productos(models.Model):
     sabor = models.CharField(max_length=60)
     imagen = models.ImageField(upload_to='images',null=True,blank=True)
 
-class Usuario(models.Model):
-    def __str__(self):
-        return f"Usuaria {self.nombre} {self.apellido}"
-    nombre = models.CharField(max_length=60)
-    apellido = models.CharField(max_length=60)
-    fecha = models.DateField()
-    year = models.IntegerField()
-    email = models.EmailField()
-
 
 
 class Contactos(models.Model):

@@ -8,8 +8,8 @@
 <H1>Agregar imagen</h1>
 <form action="" method="POST" enctype="multipart/form-data"> {%csrf_token%}
     <p>{{Miform.as_p}} </p>     
-    <input type="submit" style="color :rgb(13, 13, 224)" value ='Subir imagen '>
-    
+    <input type="submit" class="btn btn-info" value ='Subir imagen '>
+    <a class="btn btn-info" href="{% url 'Borrar_avatar' user %}">Borrar avatar</a>
 </form>   
      
 {% endblock parrafo %}

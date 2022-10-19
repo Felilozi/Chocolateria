@@ -8,7 +8,7 @@ Gracias por venir!!!
 {% endblock titulo %}
 {% block parrafo %}
 <h1 style="color:darkcyan">Editar choco </h1> 
-<form action=""method="POST">{% csrf_token %}
+<form action=""method="POST" enctype="multipart/form-data">{% csrf_token %}
 <table>
 {{choco2.as_p}}
 </table>

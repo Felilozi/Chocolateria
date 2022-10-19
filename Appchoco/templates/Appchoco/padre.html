@@ -15,15 +15,33 @@
         <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="{% static 'Appchoco/css/styles.css'%}" rel="stylesheet" />
+        <style type="text/css">
+            .avatar{
+                border-radius: 50%;
+                height:40px;
+                width:40px;
+                overflow:hidden;
+                position:relative;
+            }                   
+            .avatar img {
+                display: block;
+                height: 100%;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);                      
+            }
+          </style>
+
     </head>
     <body>
         <!-- Navigation-->
         <nav class="navbar navbar-dark" style="background-color: #2e1616;">
             <div class="container">
-                
+               
                 
                 <a class="navbar-brand" href="{% url 'Inicio' %}">Inicio</a>
                 <a class="navbar-brand" href="{% url 'Contacto' %}">Contacto</a>  
+                <a class="navbar-brand" href="{% url 'About' %}">About</a> 
                 
                 
                 {%if request.user.is_authenticated%}
@@ -32,13 +50,15 @@
                 <a class="navbar-brand" href="{% url 'productos' %}">Productos</a>                       
                 <a class="bi bi-search navbar-brand" href="{% url 'buscarc' %}">Buscar</a>    
 
-                <p class="bi bi-person-circle" style="color  : rgb(107, 107, 175)">{{user}}</p>   
+                <p class="bi bi-person-circle"  style="color  : rgb(107, 107, 175)">{{user}}</p>
+                            
                 {%with first_image=user.avatar_set.first %}
                     {%if first_image %}
-                        <img src="{{first_image.imagen.url}}" alt="">
+                        <img  src="{{first_image.imagen.url}}" class="avatar" alt="">
                     {%endif%}
 
                 {%endwith%} 
+                
                 <a class="bi bi-door-closed-fill btn btn-info" href="{% url 'Modificar' %}">Editar perfil</a>                                           
                 <a class="bi bi-door-closed-fill btn btn-info" href="{% url 'Cerrar' %}">Salir</a>
                 
@@ -99,14 +119,11 @@
                     <div class="col-lg-6 h-100 text-center text-lg-end my-auto">
                         <ul class="list-inline mb-0">
                             <li class="list-inline-item me-4">
-                                <a href="#!"><i class="bi-facebook fs-3"></i></a>
+                                <a href="#!"><i class="bi bi-suit-heart-fill fs-3"></i></a>
                             </li>
                             <li class="list-inline-item me-4">
-                                <a href="#!"><i class="bi-twitter fs-3"></i></a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="#!"><i class="bi-instagram fs-3"></i></a>
-                            </li>
+                                <a href="{% url 'LeerMensajes'%}"><i class="bi bi-envelope fs-3"></i></a>
+
                         </ul>
                     </div>
                 </div>

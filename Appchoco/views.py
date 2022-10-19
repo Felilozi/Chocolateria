@@ -12,6 +12,7 @@ from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
 from django.contrib.auth import login, logout ,authenticate
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
+from django.core.exceptions import ObjectDoesNotExist
 
 
 
@@ -24,60 +25,39 @@ def modificar(request):
     return render(request,"Appchoco/modificaciones.html")
 ############# Avatar #############
 @login_required
-def agregar_imagen(request):
+def agregar_editar_avatar(request):
     if request.method=="POST":##boton de subir imagen
         miformulario2 = Avatarfomulario(request.POST, request.FILES)  
         if miformulario2.is_valid():
             informacion= miformulario2.cleaned_data
             avatar=Avatar(user=request.user, imagen=informacion['imagen'])
+            try:
+                borrarA= Avatar.objects.get(user=request.user)
+                if borrarA is not None:
+                       borrarA.delete()
+            except ObjectDoesNotExist:
+                print("Error")        
             avatar.save()
+
             return render(request,"Appchoco/inicio.html")
     else:
         miformulario2 = Avatarfomulario()
     
     return render(request,"Appchoco/agreImagen.html",{"Miform":miformulario2})    
-'''
-def editarchoco(request,nombres): #### Editar
-    choco = Productos.objects.get(nombre=nombres)
-    if request.method=="POST":
-        miformulario= Chocolate_productos(request.POST, request.FILES)
-        if  miformulario.is_valid(): 
-            info= miformulario.cleaned_data
-
-            choco.nombre=info["nombre"]
-            choco.precio=info["precio"]
-            choco.sabor=info["sabor"]                 
-            mi_imagen = info["imagen"]
-            if mi_imagen is not None:
-                choco.imagen=mi_imagen
-            choco.save()
-
-            return render(request,"Appchoco/inicio.html")
-    else:
-        miformulario = Chocolate_productos(initial={'nombre':choco.nombre,'precio':choco.precio,
-       'sabor':choco.sabor,'imagen':choco.imagen}) 
-                    
-    return render(request,"Appchoco/editarchoco.html",{"choco2":miformulario,'resultado':nombres})
 
 
 
-''' 
-def editarAvatar(request,user1):
-    formulario= Avatar.objects.get(user=user1)
-    if request.method=="POST":##boton de subir imagen
-        miformulario2 = Avatarfomulario(request.POST, request.FILES)  
-        if miformulario2.is_valid():
 
-            informacion= miformulario2.cleaned_data
-            
-            formulario.user=request.user
-            formulario.imagen=informacion['imagen']
-            formulario.save()
-            return render(request,"Appchoco/inicio.html")
-    else:
-        miformulario2 = Avatarfomulario()
+def borraAvatar(request,user):
+    try:
+        borrarA= Avatar.objects.get(user=request.user)
+        if borrarA is not None:
+            borrarA.delete()
+    except ObjectDoesNotExist:
+        print("Error")
+    borrar_avatar = Avatar.objects.all()
     
-    return render(request,"Appchoco/editarimagen.html",{"Miform1":miformulario2,'resultado':user1})    
+    return render(request,"Appchoco/modificaciones.html",{"borrarA":borrar_avatar})    
 
 
 #########---Usuario---###############################
@@ -210,7 +190,9 @@ def editarchoco(request,nombres): #### Editar
                     
     return render(request,"Appchoco/editarchoco.html",{"choco2":miformulario,'resultado':nombres})
 
-
+##### Sobre mi ###
+def about(request):
+    return render(request,"Appchoco/about.html")
 
 ###Contacto###
 
