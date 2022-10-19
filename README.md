@@ -1,7 +1,6 @@
 ## Chocolateria
 Buenas mi nombre es Felicia Lozinski Silva 
-Tengo 25 años estoy estudiando programacion en el lenguaje python 
-Este es mi proyecto final 
+Tengo 25 años estoy estudiando programacion en el lenguaje python, este es mi proyecto final 
 Muchas gracias
 
 
