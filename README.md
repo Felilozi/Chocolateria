@@ -1,10 +1,17 @@
 ## Chocolateria
+Buenas mi nombre es Felicia Lozinski Silva 
+Tengo 25 años estoy estudiando programacion en el lenguaje python 
+Este es mi proyecto final 
+Muchas gracias
+
 
 ## Requisitos 
 
 istalar django
 
 istalar python 
+
+instalar SQL lite
 
 ## Mi primera pagina web (proyecto final) 
 
