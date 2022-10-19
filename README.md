@@ -14,32 +14,42 @@ instalar SQL lite
 
 ## Mi primera pagina web (proyecto final) 
 
-la mayorias de las cosas aun no estan completa
-
 #### Lo que hace:
 
 Por el momento mi proyecto hace 
 
 1 Te redirige a cada pagina con los botones
 
-2 podes crear un usuario 
+2 Iniciar secion
 
-3 podes Buscar productos 
+3 podes Buscar productos y leer productos
+
+4 podes Agregar, Eliminar y Editar los productos 
+
+5 Eliminar,Editar y Agregar Avatar
+
+6 Cerrar sesion
+ 
+7 registrarte 
+
+8 Mandar Mensajes, ver detalle, eliminar, editar 
+
+
+
+
 
 #### Contiene
+1 Inicio 
+2 Contactos
+3 About
+4 Mensajes
+5 Iniciar Sesion
+6 Registrarce 
+una ves que te registre y inicies sesion podras aceder 
+1 Producto
+2 Buscar
+3 Editar Usuario
+4 cerrar
 
-1 pagina de inicio 
-
-2 pagina de registro 
-
-3 pagina de productos que debera ser selccionado cada uno de los chocolates  por ahora para que se garde en la bd
-
-4 pagina con cada chocolate en total son 5 
-
-5 pagina de buscador
-
-6 pagina con los resultados buscado con un boton de productos y un nuevo buscador 
-
-espero que este bien por el momento 
 
 
